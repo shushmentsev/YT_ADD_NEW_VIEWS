@@ -2,6 +2,10 @@
 
 def add_views(var_list):
 
+    # Подключение библиотек:
+    from time import sleep
+    from selenium.webdriver.common.keys import Keys
+
     # Получение переменных:
     time_0 = var_list[0].get()
     time_1 = var_list[1].get()
@@ -18,6 +22,15 @@ def add_views(var_list):
 
     # Переход по ссылке:
     drv.get(url)
+    #elem = drv.find_element_by_class_name('html5-video-container')
+    elem = drv.find_element_by_tag_name('body')
+    print(elem)
+    sleep(5)
+    elem.send_keys(Keys.ESCAPE)
+    sleep(1)
+    elem.send_keys('3')
+    sleep(1)
+    elem.send_keys('9')
 
 
 if __name__ == '__main__':
