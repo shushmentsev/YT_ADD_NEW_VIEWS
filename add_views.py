@@ -20,146 +20,150 @@ def add_views(var_list):
     time_9 = var_list[9].get()
     drv = var_list[10]
     url = var_list[11].get()
+    count = int(var_list[12].get())
 
-    # Переход по ссылке:
-    drv.get(url)
-    #elem = drv.find_element_by_class_name('html5-video-container')
-    elem = drv.find_element_by_tag_name('body')
-    print(elem)
-    sleep(5)
-    elem.send_keys(Keys.ESCAPE)
-    sleep(5)
+    for i in range(count):
 
-    # TODO: Проверка на числа
+        # Переход по ссылке:
+        drv.get('https://www.google.com')
+        drv.get(url)
+        #elem = drv.find_element_by_class_name('html5-video-container')
+        elem = drv.find_element_by_tag_name('body')
+        print(elem)
+        sleep(5)
+        elem.send_keys(Keys.ESCAPE)
+        sleep(5)
 
-    # 0 Часть:
-    if time_0 != '':
+        # TODO: Проверка на числа
 
-        elem.send_keys('0')
-        t_1 = monotonic()
+        # 0 Часть:
+        if time_0 != '':
 
-        while True:
-            if (monotonic() - t_1) < float(time_0):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_0):
-                print('Всё')
-                break
-    # 1 Часть:
-    if time_1 != '':
+            elem.send_keys('0')
+            t_1 = monotonic()
 
-        elem.send_keys('1')
-        t_1 = monotonic()
+            while True:
+                if (monotonic() - t_1) < float(time_0):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_0):
+                    print('Всё')
+                    break
+        # 1 Часть:
+        if time_1 != '':
 
-        while True:
-            if (monotonic() - t_1) < float(time_1):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_1):
-                print('Всё')
-                break
-    # 2 Часть:
-    if time_2 != '':
+            elem.send_keys('1')
+            t_1 = monotonic()
 
-        elem.send_keys('2')
-        t_1 = monotonic()
+            while True:
+                if (monotonic() - t_1) < float(time_1):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_1):
+                    print('Всё')
+                    break
+        # 2 Часть:
+        if time_2 != '':
 
-        while True:
-            if (monotonic() - t_1) < float(time_2):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_2):
-                print('Всё')
-                break
+            elem.send_keys('2')
+            t_1 = monotonic()
+
+            while True:
+                if (monotonic() - t_1) < float(time_2):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_2):
+                    print('Всё')
+                    break
 
 
-    # 3 Часть:
-    if time_3 != '':
+        # 3 Часть:
+        if time_3 != '':
 
-        elem.send_keys('3')
-        t_1 = monotonic()
+            elem.send_keys('3')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_3):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_3):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_3):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_3):
+                    print('Всё')
+                    break
 
-    # 4 Часть:
-    if time_4 != '':
+        # 4 Часть:
+        if time_4 != '':
 
-        elem.send_keys('4')
-        t_1 = monotonic()
+            elem.send_keys('4')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_4):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_4):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_4):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_4):
+                    print('Всё')
+                    break
 
-    # 5 Часть:
-    if time_5 != '':
+        # 5 Часть:
+        if time_5 != '':
 
-        elem.send_keys('5')
-        t_1 = monotonic()
+            elem.send_keys('5')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_5):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_5):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_5):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_5):
+                    print('Всё')
+                    break
 
-    # 6 Часть:
-    if time_6 != '':
+        # 6 Часть:
+        if time_6 != '':
 
-        elem.send_keys('6')
-        t_1 = monotonic()
+            elem.send_keys('6')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_6):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_6):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_6):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_6):
+                    print('Всё')
+                    break
 
-    # 7 Часть:
-    if time_7 != '':
+        # 7 Часть:
+        if time_7 != '':
 
-        elem.send_keys('7')
-        t_1 = monotonic()
+            elem.send_keys('7')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_7):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_7):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_7):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_7):
+                    print('Всё')
+                    break
 
-    # 8 Часть:
-    if time_8 != '':
+        # 8 Часть:
+        if time_8 != '':
 
-        elem.send_keys('8')
-        t_1 = monotonic()
+            elem.send_keys('8')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_8):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_8):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_8):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_8):
+                    print('Всё')
+                    break
 
-    # 9 Часть:
-    if time_9 != '':
+        # 9 Часть:
+        if time_9 != '':
 
-        elem.send_keys('9')
-        t_1 = monotonic()
+            elem.send_keys('9')
+            t_1 = monotonic()
 
-        while True:
-            if (monotonic() - t_1) < float(time_9):
-                sleep(1)
-            elif (monotonic() - t_1) >= float(time_9):
-                print('Всё')
-                break
+            while True:
+                if (monotonic() - t_1) < float(time_9):
+                    sleep(1)
+                elif (monotonic() - t_1) >= float(time_9):
+                    print('Всё')
+                    break
 
 
 if __name__ == '__main__':

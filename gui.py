@@ -80,11 +80,19 @@ def crt_gui(**data):
     ent_time_9 = Entry(win, textvariable=var_time_9)  
     ent_time_9.place(anchor="nw", relx=0.95, y=25, relwidth=0.05, height=25)
 
+    # Поле для ввода количества повторов:
+    global var_count
+    var_count = StringVar()
+    ent_count = Entry(win, textvariable=var_count)
+    ent_count.place(anchor="nw", relx=0.55, y=50, relwidth=0.35, height=25)
+
     # Кнопка "Накрутить":
     var_list = [var_time_0, var_time_1, var_time_2, var_time_3, var_time_4, var_time_5, var_time_6, var_time_7,
-                var_time_8, var_time_9, drv, var_req]
+                var_time_8, var_time_9, drv, var_req, var_count]
     btn_start = Button(win, text="Накрутить", command=lambda: add_views(var_list))
     btn_start.place(anchor="nw", relx=0.8, y=0, relwidth=0.2, height=25)
+
+
 
     # Mainloop():
     win.mainloop()
