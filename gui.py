@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from tkinter import Tk, Button, Label, Entry, StringVar
-from add_views import add_views
-
 def crt_gui(**data):
+
+    # Библиотеки:
+    from tkinter import Tk, Button, Label, Entry, StringVar
+    from add_views import add_views
 
     # Получение переменных:
     drv = data.get('drv')
@@ -144,4 +145,3 @@ if __name__ == '__main__':
     from drv import get_drv
     drv_1 = get_drv()
     crt_gui(drv=drv_1)
-
