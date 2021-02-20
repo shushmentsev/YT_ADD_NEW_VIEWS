@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from tkinter import Tk, Button, StringVar, Entry
-
-# Temp
-def main_func():
-
-    pass
+from add_views import add_views
 
 def crt_gui(**data):
 
@@ -23,10 +19,6 @@ def crt_gui(**data):
     var_req = StringVar()
     ent_req = Entry(win, textvariable=var_req)  
     ent_req.place(anchor="nw", relx=0.0, y=0, relwidth=0.8, height=25)
-
-    # Кнопка "Накрутить":
-    btn_start = Button(win, text="Накрутить", command=main_func)
-    btn_start.place(anchor="nw", relx=0.8, y=0, relwidth=0.2, height=25)
 
     # Поле для ввода времени 0:
     global var_time_0
@@ -88,13 +80,18 @@ def crt_gui(**data):
     ent_time_9 = Entry(win, textvariable=var_time_9)  
     ent_time_9.place(anchor="nw", relx=0.95, y=25, relwidth=0.05, height=25)
 
+    # Кнопка "Накрутить":
+    var_list = [var_time_0, var_time_1, var_time_2, var_time_3, var_time_4, var_time_5, var_time_6, var_time_7,
+                var_time_8, var_time_9, drv, var_req]
+    btn_start = Button(win, text="Накрутить", command=lambda: add_views(var_list))
+    btn_start.place(anchor="nw", relx=0.8, y=0, relwidth=0.2, height=25)
+
     # Mainloop():
     win.mainloop()
-
     
 if __name__ == '__main__':
 
     from drv import get_drv
     drv_1 = get_drv()
     crt_gui(drv=drv_1)
-    
+
