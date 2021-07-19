@@ -3,6 +3,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from sys import platform
+from os import system
 
 #Путь к драйверу:
 from conf import PTH_CHROMIUM_DRV_LIN, PTH_CHROME_DRV_WIN
@@ -26,6 +27,9 @@ def set_opt():
     # Размер окна:
     # options.add_argument("--start-maximized")
     options.add_argument("--window-size=1240x720")
+
+    # Экспериментальная опция для подхвата уже запущенного браузера:
+    options.add_experimental_option('debuggerAddress', 'localhost:9014')
 
     # Безголовый режим:
     #options.add_argument("headless")
@@ -127,6 +131,9 @@ def get_drv():
 
 
 if __name__ == "__main__":
+
+    # Запуск браузера:
+    system('start chrome.exe -remote-debugging-port=9014 --user-data-dir="D:\Selenium\Test"')
 
     # Получение драйвера:
     drv = get_drv()    
