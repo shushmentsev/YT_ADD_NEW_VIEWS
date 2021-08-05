@@ -21,6 +21,7 @@ def add_views(var_list):
     drv = var_list[10]
     url = var_list[11].get()
     count = int(var_list[12].get())
+    timeout = int(var_list[13].get())
 
     for i in range(count):
 
@@ -164,6 +165,9 @@ def add_views(var_list):
                 elif (monotonic() - t_1) >= float(time_9):
                     print('Всё')
                     break
+
+        print('timeout: ', timeout)
+        sleep(timeout)
 
 
 if __name__ == '__main__':

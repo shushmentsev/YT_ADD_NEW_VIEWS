@@ -87,9 +87,15 @@ def crt_gui(**data):
     ent_count = Entry(win, textvariable=var_count)
     ent_count.place(anchor="nw", relx=0.35, y=54, relwidth=0.1, height=25)
 
+    # Поле для ввода времени между просмотрами:
+    global var_timeout
+    var_timeout = StringVar()
+    ent_timeout = Entry(win, textvariable=var_timeout)
+    ent_timeout.place(anchor="nw", relx=0.9, y=54, relwidth=0.1, height=25)
+
     # Кнопка "Накрутить":
     var_list = [var_time_0, var_time_1, var_time_2, var_time_3, var_time_4, var_time_5, var_time_6, var_time_7,
-                var_time_8, var_time_9, drv, var_req, var_count]
+                var_time_8, var_time_9, drv, var_req, var_count, var_timeout]
     btn_start = Button(win, text="Накрутить", command=lambda: add_views(var_list))
     btn_start.place(anchor="nw", relx=0.8, y=0, relwidth=0.2, height=25)
 
@@ -136,6 +142,10 @@ def crt_gui(**data):
     # Надпись 'Количество новых просмотров:'
     lbl_9 = Label(win, text='Количество новых просмотров:')
     lbl_9.place(anchor="nw", relx=0.0, y=54, relwidth=0.35, height=25)
+
+    # Надпись 'Время между просмотрами:'
+    lbl_10 = Label(win, text='Задержка между просмотрами в сек:')
+    lbl_10.place(anchor="nw", relx=0.5, y=54, relwidth=0.35, height=25)
 
     # Mainloop():
     win.mainloop()
